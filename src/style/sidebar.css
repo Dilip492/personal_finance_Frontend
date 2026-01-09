@@ -1,0 +1,110 @@
+
+
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(180deg, #3498db, #2980b9); /* Ocean blue gradient */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar.collapsed {
+    width: 80px; /* Collapsed sidebar width */
+  }
+  
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    
+  }
+
+  .logo img{
+    width: 185px;
+  }
+  
+  .toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .menu-item a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    display: block;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .menu-item:hover a {
+    color: #000000; /* Light blue color on hover */
+    
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 60px; /* Collapsed sidebar on small screens */
+    }
+  
+    .sidebar-header .logo {
+      display: none; /* Hide logo text in collapsed mode */
+    }
+  
+    .sidebar.collapsed .menu-item {
+      text-align: center;
+    }
+  
+    .sidebar.collapsed .menu-item a {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sidebar {
+      width: 50px; /* Even smaller sidebar on very small screens */
+    }
+  
+    .sidebar-header .logo {
+      display: none;
+    }
+  
+    .sidebar.collapsed .menu-item {
+      text-align: center;
+    }
+  
+    .sidebar.collapsed .menu-item a {
+      font-size: 0.8rem;
+    }
+  }
+  
