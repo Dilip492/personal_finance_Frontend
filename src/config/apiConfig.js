@@ -1,4 +1,6 @@
-const api_base_url = "http://localhost:8000"
+// const api_base_url = "http://localhost:8000"
+const api_base_url = "https://backend-personal-finance-v6cd.onrender.com/"
+
 
 const API_ENDPOINTS = {
     LOGIN: `${api_base_url}/api/login`,
